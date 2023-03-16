@@ -14,7 +14,7 @@ namespace Practica1_Android
 {
 	
 	
-	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "13.0.99.3")]
+	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "13.1.99.25")]
 	public partial class Resource
 	{
 		
@@ -3734,7 +3734,7 @@ namespace Practica1_Android
 			public const int triangle = 2131231016;
 			
 			// aapt resource value: 0x7F080129
-			public const int txtConsultar = 2131231017;
+			public const int txtcontenidoresultado = 2131231017;
 			
 			// aapt resource value: 0x7F08012A
 			public const int txtcorreo = 2131231018;
@@ -3752,10 +3752,10 @@ namespace Practica1_Android
 			public const int txtnombre = 2131231022;
 			
 			// aapt resource value: 0x7F08012F
-			public const int txtresultado = 2131231023;
+			public const int txtsaldo = 2131231023;
 			
 			// aapt resource value: 0x7F080130
-			public const int txtsaldo = 2131231024;
+			public const int txturlresultado = 2131231024;
 			
 			// aapt resource value: 0x7F080131
 			public const int @unchecked = 2131231025;

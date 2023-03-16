@@ -3,7 +3,8 @@ using System.Xml.Serialization;
 using System.IO;
 using Java.Net;
 using Kotlin.Text;
-
+using System.Net;
+using Javax.Net.Ssl;
 
 namespace Practica1_Android
 {
@@ -11,7 +12,7 @@ namespace Practica1_Android
     public class MainActivity : Activity
     {
         EditText? txtNombre, txtDomicilio, txtCorreo, txtEdad, txtSaldo, txtID;
-        TextView? txtResultado;
+        TextView? txtUrlresultado, txtContenidoresultado;
         Button? btnGuardar, btnConsultar, btnXml,btnSql,btnSqlite;
         String? Nombre, Domicilio, Correo,Resultado;
         
@@ -36,7 +37,8 @@ namespace Practica1_Android
             btnXml = FindViewById<Button>(Resource.Id.btnxml);
             btnSql = FindViewById<Button>(Resource.Id.btnsql);
             btnSqlite = FindViewById<Button>(Resource.Id.btnsqlite);
-            txtResultado = FindViewById<TextView>(Resource.Id.txtresultado);
+            txtUrlresultado = FindViewById<TextView>(Resource.Id.txturlresultado);
+            txtContenidoresultado = FindViewById<TextView>(Resource.Id.txtcontenidoresultado);
 
             btnGuardar.Click += delegate
             {
@@ -109,6 +111,7 @@ namespace Practica1_Android
                     {
                         Toast.MakeText(this,"Guardado Correctamente en SQLite",ToastLength.Long).Show();
 
+                        txtID.Text = "Id";
                         txtNombre.Text = "Nombre";
                         txtDomicilio.Text = "Domicilio";
                         txtCorreo.Text = "Correo";
@@ -128,7 +131,7 @@ namespace Practica1_Android
 
             };
 
-            btnConsultar.Click += delegate
+            btnConsultar.Click += async delegate
             {
                 var DC = new Datos();
                 try
@@ -145,13 +148,90 @@ namespace Practica1_Android
                     txtSaldo.Text = datos.Saldo.ToString();
 
                     string xmlContent = File.ReadAllText(Path.Combine(System.Environment.GetFolderPath(Environment.SpecialFolder.Personal), txtID.Text + ".xml"));
-                    string ruta = (Path.Combine(System.Environment.GetFolderPath(Environment.SpecialFolder.Personal), txtID.Text + ".xml"));
+                    string xmlRuta = (Path.Combine(System.Environment.GetFolderPath(Environment.SpecialFolder.Personal), txtID.Text + ".xml"));
                     //txtResultado.Text = ("URL:"+ ruta + "Contenido:" + xmlContent);
-                    txtResultado.Text = string.Format("URL: <b>{0}</b> Contenido: <b>{1}</b>", ruta, xmlContent);
+                    Toast.MakeText(this,("URL"+xmlRuta),ToastLength.Long).Show();
+                    Toast.MakeText(this,("CONTENIDO:"+xmlContent), ToastLength.Long).Show();
+
+                }
+                catch (System.Exception ex)
+                {
+                    Toast.MakeText(this, ex.Message, ToastLength.Long).Show();
+                }
+
+                try
+                {
+                    ID = int.Parse(txtID.Text);
+                    var API = "http://172.23.1.71:85/Principal/ConsultarSQLServer?ID=" + ID;
+                    var json = await TraerDatos(API);
+                    foreach (var repo in json)
+                    {
+                        txtNombre.Text = repo.Nombre;
+                        txtDomicilio.Text = repo.Domicilio;
+                        txtCorreo.Text = repo.Correo;
+                        txtEdad.Text = repo.Edad.ToString();
+                        txtSaldo.Text = repo.Saldo.ToString();
+                                               
+                    }
+                    
+                    string sqlRuta = (API);
+                    Toast.MakeText(this, ("URL:" + sqlRuta), ToastLength.Long).Show();
+
+                    WebClient client = new WebClient();
+                    string sqlContent = client.DownloadString(sqlRuta);
+                    Toast.MakeText(this, ("CONTENIDO:" + sqlContent), ToastLength.Long).Show();
+
+                }
+                catch (System.Exception ex)
+                {
+                    Toast.MakeText(this, ex.Message, ToastLength.Long).Show();
+                }
+
+                try
+                {
+                    var csql = new ClaseSQLite();
+                    csql.ID = int.Parse(txtID.Text);
+                    csql.Buscar(csql.ID);
+                    txtNombre.Text = csql.nombre;
+                    txtDomicilio.Text = csql.domicilio;
+                    txtCorreo.Text = csql.correo;
+                    txtEdad.Text = csql.edad.ToString();
+                    txtSaldo.Text = csql.saldo.ToString();
+
+
+                    
+
+
+                    string sqliteContent = ("ID:"+" "+csql.ID+" "+"Nombre:"+" "+csql.nombre+" "+"Domicilio:"+" "+csql.domicilio+" "+"Correo:"+" "+csql.correo+" "+"Edad:"+" "+csql.edad+" "+"Saldo:"+" "+csql.saldo).ToString();
+                    Toast.MakeText(this, ("CONTENIDO:" + sqliteContent), ToastLength.Long).Show();
+
+
+
+                }
+                catch (System.Exception ex)
+                {
+                    Toast.MakeText(this, ex.Message, ToastLength.Long).Show();
+                }
 
 
 
 
+            };
+
+            btnXml.Click += delegate {
+                var DC = new Datos();
+                try
+                {
+                    DC.Id = int.Parse(txtID.Text);
+                    var serializador = new XmlSerializer(typeof(Datos));
+                    var Lectura = new StreamReader(Path.Combine(System.Environment.GetFolderPath(Environment.SpecialFolder.Personal), txtID.Text + ".xml"));
+                    var datos = (Datos)serializador.Deserialize(Lectura);
+                    Lectura.Close();
+                    txtNombre.Text = datos.Nombre;
+                    txtDomicilio.Text = datos.Domicilio;
+                    txtCorreo.Text = datos.Correo;
+                    txtEdad.Text = datos.Edad.ToString();
+                    txtSaldo.Text = datos.Saldo.ToString();
                 }
                 catch (System.Exception ex)
                 {

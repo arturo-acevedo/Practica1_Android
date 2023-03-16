@@ -5109,14 +5109,14 @@ public final class R {
     public static final int transitionToEnd=0x7f080126;
     public static final int transitionToStart=0x7f080127;
     public static final int triangle=0x7f080128;
-    public static final int txtConsultar=0x7f080129;
+    public static final int txtcontenidoresultado=0x7f080129;
     public static final int txtcorreo=0x7f08012a;
     public static final int txtdomicilio=0x7f08012b;
     public static final int txtedad=0x7f08012c;
     public static final int txtid=0x7f08012d;
     public static final int txtnombre=0x7f08012e;
-    public static final int txtresultado=0x7f08012f;
-    public static final int txtsaldo=0x7f080130;
+    public static final int txtsaldo=0x7f08012f;
+    public static final int txturlresultado=0x7f080130;
     public static final int unchecked=0x7f080131;
     public static final int uniform=0x7f080132;
     public static final int up=0x7f080133;

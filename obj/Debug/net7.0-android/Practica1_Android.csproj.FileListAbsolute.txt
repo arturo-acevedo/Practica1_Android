@@ -417,14 +417,6 @@ C:\MisProyectos\lasallebajio\mtwydm\201_damwp\VisualStudio\source\repos\Practica
 C:\MisProyectos\lasallebajio\mtwydm\201_damwp\VisualStudio\source\repos\Practica1_Android\obj\Debug\net7.0-android\android\assets\SQLitePCLRaw.lib.e_sqlite3.android.dll
 C:\MisProyectos\lasallebajio\mtwydm\201_damwp\VisualStudio\source\repos\Practica1_Android\obj\Debug\net7.0-android\android\assets\SQLitePCLRaw.provider.e_sqlite3.dll
 C:\MisProyectos\lasallebajio\mtwydm\201_damwp\VisualStudio\source\repos\Practica1_Android\obj\Debug\net7.0-android\res\drawable\gradient.xml
-C:\MisProyectos\lasallebajio\mtwydm\201_damwp\VisualStudio\source\repos\Practica1_Android\obj\Debug\net7.0-android\android\typemaps.x86_64.ll
-C:\MisProyectos\lasallebajio\mtwydm\201_damwp\VisualStudio\source\repos\Practica1_Android\obj\Debug\net7.0-android\android\environment.x86_64.ll
-C:\MisProyectos\lasallebajio\mtwydm\201_damwp\VisualStudio\source\repos\Practica1_Android\obj\Debug\net7.0-android\android\compressed_assemblies.x86_64.ll
-C:\MisProyectos\lasallebajio\mtwydm\201_damwp\VisualStudio\source\repos\Practica1_Android\obj\Debug\net7.0-android\android\typemaps.x86_64.o
-C:\MisProyectos\lasallebajio\mtwydm\201_damwp\VisualStudio\source\repos\Practica1_Android\obj\Debug\net7.0-android\android\environment.x86_64.o
-C:\MisProyectos\lasallebajio\mtwydm\201_damwp\VisualStudio\source\repos\Practica1_Android\obj\Debug\net7.0-android\android\compressed_assemblies.x86_64.o
-C:\MisProyectos\lasallebajio\mtwydm\201_damwp\VisualStudio\source\repos\Practica1_Android\obj\Debug\net7.0-android\android\jni_remap.x86_64.o
-C:\MisProyectos\lasallebajio\mtwydm\201_damwp\VisualStudio\source\repos\Practica1_Android\obj\Debug\net7.0-android\app_shared_libraries\x86_64\libxamarin-app.so
 C:\MisProyectos\lasallebajio\mtwydm\201_damwp\VisualStudio\source\repos\Practica1_Android\obj\Debug\net7.0-android\android\assets\mscorlib.dll
 C:\MisProyectos\lasallebajio\mtwydm\201_damwp\VisualStudio\source\repos\Practica1_Android\obj\Debug\net7.0-android\android\assets\System.Collections.Concurrent.dll
 C:\MisProyectos\lasallebajio\mtwydm\201_damwp\VisualStudio\source\repos\Practica1_Android\obj\Debug\net7.0-android\android\assets\System.Data.Common.dll
@@ -438,3 +430,11 @@ C:\MisProyectos\lasallebajio\mtwydm\201_damwp\VisualStudio\source\repos\Practica
 C:\MisProyectos\lasallebajio\mtwydm\201_damwp\VisualStudio\source\repos\Practica1_Android\obj\Debug\net7.0-android\android\assets\System.Runtime.Extensions.dll
 C:\MisProyectos\lasallebajio\mtwydm\201_damwp\VisualStudio\source\repos\Practica1_Android\obj\Debug\net7.0-android\android\assets\System.Runtime.Serialization.Formatters.dll
 C:\MisProyectos\lasallebajio\mtwydm\201_damwp\VisualStudio\source\repos\Practica1_Android\obj\Debug\net7.0-android\android\assets\System.Xml.dll
+C:\MisProyectos\lasallebajio\mtwydm\201_damwp\VisualStudio\source\repos\Practica1_Android\obj\Debug\net7.0-android\android\typemaps.arm64-v8a.ll
+C:\MisProyectos\lasallebajio\mtwydm\201_damwp\VisualStudio\source\repos\Practica1_Android\obj\Debug\net7.0-android\android\environment.arm64-v8a.ll
+C:\MisProyectos\lasallebajio\mtwydm\201_damwp\VisualStudio\source\repos\Practica1_Android\obj\Debug\net7.0-android\android\compressed_assemblies.arm64-v8a.ll
+C:\MisProyectos\lasallebajio\mtwydm\201_damwp\VisualStudio\source\repos\Practica1_Android\obj\Debug\net7.0-android\android\typemaps.arm64-v8a.o
+C:\MisProyectos\lasallebajio\mtwydm\201_damwp\VisualStudio\source\repos\Practica1_Android\obj\Debug\net7.0-android\android\environment.arm64-v8a.o
+C:\MisProyectos\lasallebajio\mtwydm\201_damwp\VisualStudio\source\repos\Practica1_Android\obj\Debug\net7.0-android\android\compressed_assemblies.arm64-v8a.o
+C:\MisProyectos\lasallebajio\mtwydm\201_damwp\VisualStudio\source\repos\Practica1_Android\obj\Debug\net7.0-android\android\jni_remap.arm64-v8a.o
+C:\MisProyectos\lasallebajio\mtwydm\201_damwp\VisualStudio\source\repos\Practica1_Android\obj\Debug\net7.0-android\app_shared_libraries\arm64-v8a\libxamarin-app.so

@@ -1202,14 +1202,14 @@ int id topPanel 0x7f080125
 int id transitionToEnd 0x7f080126
 int id transitionToStart 0x7f080127
 int id triangle 0x7f080128
-int id txtConsultar 0x7f080129
+int id txtcontenidoresultado 0x7f080129
 int id txtcorreo 0x7f08012a
 int id txtdomicilio 0x7f08012b
 int id txtedad 0x7f08012c
 int id txtid 0x7f08012d
 int id txtnombre 0x7f08012e
-int id txtresultado 0x7f08012f
-int id txtsaldo 0x7f080130
+int id txtsaldo 0x7f08012f
+int id txturlresultado 0x7f080130
 int id unchecked 0x7f080131
 int id uniform 0x7f080132
 int id up 0x7f080133

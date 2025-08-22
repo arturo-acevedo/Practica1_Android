@@ -51,7 +51,7 @@ namespace Practica1_Android
                     DC.Domicilio = txtDomicilio.Text;
                     DC.Correo = txtCorreo.Text;
                     DC.Edad = int.Parse(txtEdad.Text);
-                    DC.Saldo = int.Parse(txtSaldo.Text);
+                    DC.Saldo = double.Parse(txtSaldo.Text);
 
                     var serializador = new XmlSerializer(typeof(Datos));
                     var Escritura = new StreamWriter (Path.Combine(System.Environment.GetFolderPath (System.Environment.SpecialFolder.Personal), txtID.Text + ".xml"));  
@@ -76,7 +76,7 @@ namespace Practica1_Android
                     Domicilio = txtDomicilio.Text;
                     Correo = txtCorreo.Text;
                     Edad = int.Parse(txtEdad.Text);
-                    Saldo = int.Parse(txtSaldo.Text);
+                    Saldo = double.Parse(txtSaldo.Text);
 
                     var API = "http://172.23.1.71:85/Principal/AlmacenarSQLServer?Nombre=" +
                     Nombre + "&Domicilio=" + Domicilio + "&Correo=" + Correo +
